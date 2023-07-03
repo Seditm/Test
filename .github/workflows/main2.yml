@@ -1,8 +1,6 @@
 name: Scheduler
 
-on:
-  schedule:
-    - cron: '0 * 0 ? * * *'
+on: none
 
 jobs:
   build:
