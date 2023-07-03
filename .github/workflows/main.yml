@@ -1,9 +1,17 @@
 name: Scheduler
-'on':
+
+on:
   schedule:
-    - cron: 0 0 * * *
+    - cron: '0 0 * * *'
+
 jobs:
-  - steps:
-    run: |
-      sudo apt-get -install testng -y 
-      testng --version
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Install dependencies
+        run: |
+          sudo apt-get install testng -y
+
+      - name: Verify TestNG installation
+        run: testng --version
