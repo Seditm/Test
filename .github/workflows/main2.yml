@@ -1,6 +1,8 @@
 name: Scheduler
 
-on: none
+on:
+  push:
+    branches: [ "main" ]
 
 jobs:
   build:
